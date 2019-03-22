@@ -64,24 +64,3 @@ void serialEvent() {
  }
 }
 
-
-void loop() {
-  if (receiver.decode(&results)) {
-    Serial.println(results.value, HEX);
-
-    if (results.value == "forward") {
-      forward();
-      Serial.println("FORWARD");
-    } else if (results.value == "left") {
-      Serial.println("HALT");
-      halt();
-    } // add more "else if" conditions here for other buttons!
-    else if (results.value == "reverse") {
-      Serial.println("REVERS");
-      reverse();
-    }
-
-    receiver.resume();
-  }
-
-}
