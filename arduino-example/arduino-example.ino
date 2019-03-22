@@ -45,8 +45,8 @@ void halt() {
 void serialEvent() {
   String input = Serial.readStringUntil('\n');
   input.trim();
- if (receiver.decode(&results)) {
-    Serial.println(results.value, HEX);
+//  if (receiver.decode(&results)) {
+//     Serial.println(results.value, HEX);
   if (input == "forward") {
     Serial.println("FORWARD!");
     // go forward
@@ -62,6 +62,6 @@ void serialEvent() {
     // go back
    reverse();
   }
- }
+ //}
 }
 
