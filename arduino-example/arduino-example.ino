@@ -6,7 +6,7 @@ int motorLeftForward    = 11;
 int motorLeftReverse    = 12;
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(115200);
 
 
   pinMode(motorRightForward, OUTPUT);
