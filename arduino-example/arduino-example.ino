@@ -1,8 +1,4 @@
-//#include <IRremote.h>
 
-//int remoteInputPin = 3;
-IRrecv receiver(remoteInputPin);
-decode_results results;
 
 int motorRightForward   = 9;
 int motorRightReverse   = 10;
@@ -11,7 +7,7 @@ int motorLeftReverse    = 12;
 
 void setup() {
   Serial.begin(9600);
-  //receiver.enableIRIn();
+
 
   pinMode(motorRightForward, OUTPUT);
   pinMode(motorRightReverse, OUTPUT);
@@ -45,8 +41,7 @@ void halt() {
 void serialEvent() {
   String input = Serial.readStringUntil('\n');
   input.trim();
-//  if (receiver.decode(&results)) {
-//     Serial.println(results.value, HEX);
+
   if (input == "forward") {
     Serial.println("FORWARD!");
     // go forward
@@ -62,6 +57,6 @@ void serialEvent() {
     // go back
    reverse();
   }
- //}
+
 }
 
