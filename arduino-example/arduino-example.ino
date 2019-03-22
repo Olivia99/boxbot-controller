@@ -42,19 +42,41 @@ void halt() {
 // add more control functions here!
 
 // end of control functions
+void serialEvent() {
+  String input = Serial.readStringUntil('\n');
+  input.trim();
+ if (receiver.decode(&results)) {
+    Serial.println(results.value, HEX);
+  if (input == "0x8CB44") {
+    Serial.println("FORWARD!");
+    // go forward
+        forward();
+  } else if (input == "0xCB44") {
+    // go left
+   halt();
+  } else if (input == "right") {
+    // go right
+    
+  } else if (input == "backwards") {
+    // go back
+   reverse();
+  }
+ }
+}
+
 
 void loop() {
   if (receiver.decode(&results)) {
     Serial.println(results.value, HEX);
 
-    if (results.value == 0x8CB44) {
+    if (results.value == "forward") {
       forward();
       Serial.println("FORWARD");
-    } else if (results.value == 0xCB44) {
+    } else if (results.value == "left") {
       Serial.println("HALT");
       halt();
     } // add more "else if" conditions here for other buttons!
-    else if (results.value == 0x5EB44) {
+    else if (results.value == "reverse") {
       Serial.println("REVERS");
       reverse();
     }
