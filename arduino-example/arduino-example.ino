@@ -47,15 +47,16 @@ void serialEvent() {
   input.trim();
  if (receiver.decode(&results)) {
     Serial.println(results.value, HEX);
-  if (input == "0x8CB44") {
+  if (input == "forward") {
     Serial.println("FORWARD!");
     // go forward
         forward();
-  } else if (input == "0xCB44") {
+  } else if (input == "left") {
     // go left
    halt();
   } else if (input == "right") {
     // go right
+    halt();
     
   } else if (input == "backwards") {
     // go back
