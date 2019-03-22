@@ -1,6 +1,6 @@
-#include <IRremote.h>
+//#include <IRremote.h>
 
-int remoteInputPin = 3;
+//int remoteInputPin = 3;
 IRrecv receiver(remoteInputPin);
 decode_results results;
 
@@ -11,7 +11,7 @@ int motorLeftReverse    = 12;
 
 void setup() {
   Serial.begin(9600);
-  receiver.enableIRIn();
+  //receiver.enableIRIn();
 
   pinMode(motorRightForward, OUTPUT);
   pinMode(motorRightReverse, OUTPUT);
@@ -58,7 +58,7 @@ void serialEvent() {
     // go right
     halt();
     
-  } else if (input == "backwards") {
+  } else if (input == "reverse") {
     // go back
    reverse();
   }
