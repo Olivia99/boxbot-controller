@@ -1,10 +1,10 @@
 # boxbot-controller 
 
 ## Teammates
-  Tia Huang,
-  Jieying Yang,
-  Dina Haddad,
-  Lamont Lamar
+- Tia Huang,
+- Jieying Yang,
+- Dina Haddad,
+- Lamont Lamar
 
 ## Description
 
@@ -20,3 +20,30 @@ We began the project by building the box to which will have the arduino in it an
 ![](https://raw.githubusercontent.com/Olivia99/boxbot-controller/master/Screen%20Shot%202019-04-05%20at%208.46.15%20AM.png)
 ![](https://raw.githubusercontent.com/Olivia99/boxbot-controller/master/Group3-schematics_bb.png)
 ![](https://raw.githubusercontent.com/Olivia99/boxbot-controller/master/IMG_2785.JPG)
+
+
+
+## Set up
+
+### Clone the code from Github to your ternimal
+```bash  
+git clone (#)
+```  
+### Connect your Raspberry PI
+```bash
+ssh pi@cp2-pi-3.local
+password: raspberry
+```
+
+### Run your code
+
+```bash
+cd boxbot-controleer 
+npm install
+npm start
+```
+
+### Open your window servor
+http://cp2-pi-3.local:8000/
+
+
