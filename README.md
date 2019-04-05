@@ -13,7 +13,7 @@ We began the project by building the box and attaching the motors, as well as wi
 
 ## system diagram
 
-![](https://raw.githubusercontent.com/Olivia99/boxbot-controller/master/IMG_2788.JPG)
+![](https://raw.githubusercontent.com/Olivia99/boxbot-controller/master/Screen%20Shot%202019-04-05%20at%209.11.04%20AM.png)
 
 ## electrical schematic
 
