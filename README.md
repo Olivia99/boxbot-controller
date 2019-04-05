@@ -1,20 +1,5 @@
 # boxbot-controller
-A basic controller app for the Remote Control Cardboard Box
 
-To run the boxbot-controller, first fork this repository, and then clone your copy:
+# Description
 
-`git clone https://github.com/<your-username>/boxbot-controller`
-
-Then, `cd` into the directory and install the dependencies:
-
-`cd boxbot-controller`
-`npm install`
-
-Lastly, run the server with:
-
-`npm start`
-
-The server will try to connect to your Arduino using the `/dev/ttyACM0` name, but if this is incorrect you will need to change this value in `server.js`. Make sure your Arduino is connected before running the server.
-
-Lastly, in [`arduino-snippet.ino`](./arduino-snippet.ino) you will find a `serialEvent` function you can use to handle messages from the browser. Include this in your Arduino sketch!
-
+We began the project by building the box and attaching the motors, as well as wiring the motherboard and Arduino. After setting that all up, we realized that there are a couple of errors in the wiring so we had to remove all the wires and restart to problem solve. After figuring out the issue with the wiring, we then began to construct the sensor to the motherboard and figure out the technical issues with that. After struggling with the remote and sensor we found out the sensor was in actuality broken! We then began to connect the new sensor to the remote and then to the motors. We figured out one of the motors was not working so after troubleshooting that through the wiring and testing out the voltage we were able to fix it. Now it was time to actually write code for the remote control. We were able to run the motors through the remote successfully. We then added a distance sensor to get the car to create a braking effect. 
